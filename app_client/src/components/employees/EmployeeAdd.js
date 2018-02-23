@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import axios from "axios";
 
 class EmployeeAdd extends Component {
 
@@ -16,6 +17,9 @@ class EmployeeAdd extends Component {
         this.handleInputChange = this
             .handleInputChange
             .bind(this);
+        this.handleSubmit = this
+            .handleSubmit
+            .bind(this);
     }; // END STATE
 
     // HANDLE INPUT CHANGE
@@ -32,6 +36,16 @@ class EmployeeAdd extends Component {
     // HANDLE SUBMIT
     handleSubmit(e) {
         e.preventDefault();
+        console.log("submit", this.state)
+        axios.post("/api/create", this.state)
+            .then(resp => {
+                console.log(this.state, resp.data);
+                this.props.history.push("/employees");
+            })
+            .catch(err => {
+                console.error(err);
+            })
+
     }; // END HANDLE SUBMIT
 
     // POST EMPLOYEE
