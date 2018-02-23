@@ -1,7 +1,10 @@
 import React, {Component} from "react";
 
+// NAVBAR COMPONENT
 class Navbar extends Component {
+    // RENDER
     render() {
+        // RETURN
         return (
             <nav className="navbar navbar-default">
                 <div className="container-fluid">
@@ -20,7 +23,7 @@ class Navbar extends Component {
                             <span className="icon-bar"></span>
                         </button>
                         <a className="navbar-brand">
-                            Admin CRM
+                            Employee Track
                         </a>
                     </div>
 

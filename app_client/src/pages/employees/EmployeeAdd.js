@@ -14,7 +14,7 @@ const formContainerStyle = {
     padding: "0.5em 0.75em 0.625em"
 }; // END CONTIANER STYLES
 
-// EMPLOYEE ADD COMPONENT
+// EMPLOYEE ADD PAGE
 class EmployeeAdd extends Component {
     // PROPS CONDTRUCTOR AND STATE
     constructor(props) {
@@ -62,11 +62,11 @@ class EmployeeAdd extends Component {
     render() {
         // RETURN THIS HTML
         return (
-            <div>
-                <h1 className="text-center">
-                    Employee Add
+            <div className="container-fluid">
+                <h1>
+                    Add Employee
                 </h1>
-                <div className="col-md-8 col-md-offset-2" style={formContainerStyle}>
+                <div className="col-xs-10 col-sm-8 col-md-6" style={formContainerStyle}>
                     <Form
                         state={FormStates.add}
                         employee={this.state}
@@ -81,7 +81,7 @@ class EmployeeAdd extends Component {
             </div>
         ); // END RETURN
     }; // END RENDER
-}; // END COMPONENT
+}; // END EMPLOYEE ADD PAGE
 
-// EXPORT THIS COMPONENT
+// EXPORT EMPLOYEE ADD PAGE
 export default EmployeeAdd;
