@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+// NAVBAR STYLES
+import "./Navbar.css";
 
 // NAVBAR COMPONENT
 class Navbar extends Component {
