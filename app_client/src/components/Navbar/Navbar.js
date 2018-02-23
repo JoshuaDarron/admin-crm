@@ -12,21 +12,31 @@ class Navbar extends Component {
               data-toggle="collapse"
               data-target="#bs-example-navbar-collapse-1"
               aria-expanded="false">
-              <span className="sr-only">Toggle navigation</span>
+              <span className="sr-only">
+                Toggle navigation
+              </span>
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand">Admin CRM</a>
+            <a className="navbar-brand">
+              Admin CRM
+            </a>
           </div>
 
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav">
               <li>
-                <a href="/">Home</a>
+                <a href="/">
+                  Home
+                </a>
               </li>
               <li >
-                <a href="/employees">Employees<span className="sr-only">(current)</span>
+                <a href="/employees">
+                  Employees
+                <span className="sr-only">
+                  (current)
+                </span>
                 </a>
               </li>
             </ul>
@@ -64,7 +74,9 @@ class Navbar extends Component {
           </div>
         </div>
       </nav>
-    )
-  }
-}
+    );  // END RETURN 
+  };  // END RENDER 
+}; // END NAVBAR
+
+// EXPORT NAVBAR
 export default Navbar;
