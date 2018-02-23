@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import "./Footer.css";
 
 // FOOTER COMPONENT
 class Footer extends Component {
@@ -6,15 +7,13 @@ class Footer extends Component {
     render() {
         // RETURN
         return (
-
-            <footer className="navbar-default navbar-fixed-bottom">
-                <div className="container-fluid">
-                    <span>
-                        Employee Track | Joshua Spears-Phillips
-                    </span>
-                </div>
-            </footer>
-
+                <footer className="navbar-default navbar-fixed-bottom text-center">
+                    <div className="container-fluid">
+                        <span>
+                            Employee Track | Joshua Spears-Phillips
+                        </span>
+                    </div>
+                </footer>
         ); // END RETURN
     }; // END RENDER
 }; // END NAVBAR

@@ -33,6 +33,7 @@ class EmployeeAdd extends Component {
         e.preventDefault();
         // ERROR HANDLING
         console.log("In the handleSubmit");
+        
         EmployeeModel
             .create(this.state)
             .then(resp => {
