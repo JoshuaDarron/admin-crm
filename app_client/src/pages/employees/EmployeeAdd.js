@@ -1,29 +1,53 @@
 import React, {Component} from "react";
-import axios from "axios";
+// COMPONENTS
+import Form from "../../components/Form";
+// HELPERS
+import EmployeeModel from "../../helpers/models/EmployeeModel";
+import FormStates from "../../helpers/FormStates";
 
+// FORM CONTAINER STYLES
+const formContainerStyle = {
+    boxShadow: "0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgb" +
+            "a(0,0,0,0.3)",
+    backgroundColor: "#F6F6F6",
+    border: "black",
+    padding: "0.5em 0.75em 0.625em"
+}; // END CONTIANER STYLES
+
+// EMPLOYEE ADD COMPONENT
 class EmployeeAdd extends Component {
-
-    // CONSTRUCTOR
+    // PROPS CONDTRUCTOR AND STATE
     constructor(props) {
-        // PROPS
         super(props);
-        // STATE
         this.state = {
             firstName: "",
             lastName: "",
             age: "",
             jobTitle: ""
-        }; // END STATE'
-        this.handleInputChange = this
-            .handleInputChange
-            .bind(this);
-        this.handleSubmit = this
-            .handleSubmit
-            .bind(this);
-    }; // END STATE
+        };
+    }; // END CONSTRUCTOR
 
-    // HANDLE INPUT CHANGE
-    handleInputChange(event) {
+    // HANDLE SUBMIT CLICK
+    handleSubmit(e) {
+        // PREVENT PAGE RELOAD
+        e.preventDefault();
+        // ERROR HANDLING
+        console.log("In the handleSubmit");
+        EmployeeModel
+            .create(this.state)
+            .then(resp => {
+                this
+                    .props
+                    .history
+                    .push("/employees")
+            })
+            .catch(err => {
+                console.error(err);
+            })
+    }; // END HANDLE SUBMIT
+
+    // HANDLE STATE CHANGE
+    handleChange(event) {
         const target = event.target;
         const value = target.type === 'checkbox'
             ? target.checked
@@ -31,117 +55,32 @@ class EmployeeAdd extends Component {
         const name = target.name;
 
         this.setState({[name]: value});
-    }; // END HANDLE INPUT CHANGE
+    }; // END HANDLE CHANGE
 
-    // HANDLE SUBMIT
-    handleSubmit(e) {
-        e.preventDefault();
-        console.log("submit", this.state)
-        axios.post("/api/create", this.state)
-            .then(resp => {
-                console.log(this.state, resp.data);
-                this.props.history.push("/employees");
-            })
-            .catch(err => {
-                console.error(err);
-            })
-
-    }; // END HANDLE SUBMIT
-
-    // POST EMPLOYEE
-    postEmployee = () => {
-        console.log(this.state);
-    }; // END POST EMPLOYEE
-
-    // RENDER COMPONENT
+    // RENDER
     render() {
-        // RETURN THIS HTML TO RENDER
+        // RETURN THIS HTML
         return (
-            <div className="row">
-                <div className="col-xs-12 col-xs-10 col-xs-6">
-                    <h2>
-                        Enter Employee
-                    </h2>
-                    {/* FORM */}
-                    <form className="form-horizontal" onSubmit={this.handleSubmit}>
-                        {/* FIRST NAME */}
-                        <div className="form-group">
-                            <label htmlFor="inputEmail3" className="col-sm-2 control-label">
-                                First Name
-                            </label>
-                            <div className="col-sm-10">
-                                <input
-                                    type="input"
-                                    className="form-control"
-                                    placeholder="First Name"
-                                    name="firstName"
-                                    value={this.state.firstName}
-                                    onChange={this.handleInputChange}/>
-                            </div>
-                        </div>
-                        {/* END FIRST NAME */}
-                        {/* LAST NAME */}
-                        <div className="form-group">
-                            <label htmlFor="inputPassword3" className="col-sm-2 control-label">
-                                Last Name
-                            </label>
-                            <div className="col-sm-10">
-                                <input
-                                    type="input"
-                                    className="form-control"
-                                    placeholder="Last Name"
-                                    name="lastName"
-                                    value={this.state.lastName}
-                                    onChange={this.handleInputChange}/>
-                            </div>
-                        </div>
-                        {/* END LAST NAME */}
-                        {/* AGE */}
-                        <div className="form-group">
-                            <label htmlFor="inputPassword3" className="col-sm-2 control-label">
-                                Age
-                            </label>
-                            <div className="col-sm-10">
-                                <input
-                                    type="input"
-                                    className="form-control"
-                                    placeholder="Age"
-                                    name="age"
-                                    value={this.state.age}
-                                    onChange={this.handleInputChange}/>
-                            </div>
-                        </div>
-                        {/* END AGE */}
-                        {/* JOB TITLE */}
-                        <div className="form-group">
-                            <label htmlFor="inputPassword3" className="col-sm-2 control-label">
-                                Job Title
-                            </label>
-                            <div className="col-sm-10">
-                                <input
-                                    type="input"
-                                    className="form-control"
-                                    placeholder="Job Title"
-                                    name="jobTitle"
-                                    value={this.state.jobTitle}
-                                    onChange={this.handleInputChange}/>
-                            </div>
-                        </div>
-                        {/* END JOB TITLE */}
-                        {/* SUBMIT */}
-                        <div className="form-group">
-                            <div className="col-sm-offset-2 col-sm-10">
-                                <button type="submit" onClick={this.handleSubmit} className="btn btn-default">
-                                    Create
-                                </button>
-                            </div>
-                        </div>
-                        {/* END SUMBMIT */}
-                    </form>
-                    {/* END FORM */}
+            <div>
+                <h1 className="text-center">
+                    Employee Add
+                </h1>
+                <div className="col-md-8 col-md-offset-2" style={formContainerStyle}>
+                    <Form
+                        state={FormStates.add}
+                        employee={this.state}
+                        handleChange={this
+                        .handleChange
+                        .bind(this)}
+                        handleSubmit={this
+                        .handleSubmit
+                        .bind(this)}/>
                 </div>
+
             </div>
         ); // END RETURN
     }; // END RENDER
-}; // END EMPLOYEE ADD
+}; // END COMPONENT
+
+// EXPORT THIS COMPONENT
 export default EmployeeAdd;
