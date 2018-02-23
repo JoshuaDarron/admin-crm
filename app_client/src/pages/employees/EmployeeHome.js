@@ -6,7 +6,7 @@ class EmployeeHome extends Component {
         return (
             <div>
                 <Link to="/employee/add">
-                    <button class="btn btn-primary">
+                    <button className="btn btn-primary">
                         Add Employee
                     </button>
                 </Link>
