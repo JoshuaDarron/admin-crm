@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import Jumbotron from "../components/Jumbotron";
 
 // HOME PAGE
 class Home extends Component {
@@ -6,8 +7,8 @@ class Home extends Component {
     render() {
         // RETURN
         return (
-            <div className="container-fluid">
-                Home
+            <div className="container-fluid text-center">
+                <Jumbotron />
             </div>
         ); // END RETURN
     }; // END RENDER

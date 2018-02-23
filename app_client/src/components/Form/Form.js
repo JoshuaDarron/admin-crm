@@ -17,7 +17,7 @@ class Form extends Component {
                 <form>
                     {/* FIRST NAME */}
                     <div className="form-group row">
-                        <label htmlFor="firstName" className="col-sm-2 col-form-label">
+                        <label htmlFor="firstName" className="col-sm-2 col-form-label text-center">
                             First Name
                         </label>
                         <div className="col-sm-10">
@@ -33,7 +33,7 @@ class Form extends Component {
                     </div>
                     {/* LAST NAME */}
                     <div className="form-group row">
-                        <label htmlFor="lastName" className="col-sm-2 col-form-label">
+                        <label htmlFor="lastName" className="col-sm-2 col-form-label text-center">
                             Last Name
                         </label>
                         <div className="col-sm-10">
@@ -49,7 +49,7 @@ class Form extends Component {
                     </div>
                     {/* AGE */}
                     <div className="form-group row">
-                        <label htmlFor="age" className="col-sm-2 col-form-label">
+                        <label htmlFor="age" className="col-sm-2 col-form-label text-center">
                             Age
                         </label>
                         <div className="col-sm-10">
@@ -65,7 +65,7 @@ class Form extends Component {
                     </div>
                     {/* JOB TITLE */}
                     <div className="form-group row">
-                        <label htmlFor="jobTitle" className="col-sm-2 col-form-label">
+                        <label htmlFor="jobTitle" className="col-sm-2 col-form-label text-center">
                             Job Title
                         </label>
                         <div className="col-sm-10">
