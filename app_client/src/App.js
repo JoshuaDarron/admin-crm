@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+// employee components
+import EmployeeHome from "./components/employees/EmployeeHome";
+import EmployeeAdd from "./components/employees/EmployeeAdd";
+import EmployeeEdit from "./components/employees/EmployeeEdit";
+import EmployeeView from "./components/employees/EmployeeView";
+
+
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div>
+        <Router>
+          <div>
+            <Navbar />
+            <Route exact path ="/" component={Home}/>
+            <Route exact path ="/employees" component={EmployeeHome}/>
+            <Route exact path ="/employee/add" component={EmployeeAdd}/>
+            <Route exact path ="/employee/edit/:id" component={EmployeeEdit}/>
+            <Route exact path ="/employee/view/:id" component={EmployeeView}/>
+            {/* footer go here yo */}
+          </div>
+        </Router>
       </div>
     );
   }
