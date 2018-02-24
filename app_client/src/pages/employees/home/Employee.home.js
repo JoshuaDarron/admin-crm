@@ -20,7 +20,7 @@ class EmployeeHome extends Component {
         };
     }; // END PROPS CONSTRUCTOR
 
-    // COMPONENT DID MOUNT
+    // DID THE OCMPONENT MOUNT? IF TRUE RUN THIS FUNCTION FIRST
     componentDidMount() {
         // DATABASE ROUTE WHEN COMPONENT LOADS
         EmployeeModel

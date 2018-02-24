@@ -15,6 +15,8 @@ class Table extends Component {
                     <thead>
                         {/* TABLE HEADING */}
                         <tr>
+                            <th>View</th>
+                            <th>Edit</th>
                             <th>First Name</th>
                             <th>Last Name</th>
                             <th>Age</th>
