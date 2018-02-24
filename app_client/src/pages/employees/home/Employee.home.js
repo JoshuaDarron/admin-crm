@@ -3,15 +3,42 @@ import React, {Component} from "react";
 import "./Employee.home.css"
 // LINK FROM REACT ROUTER TO LINK TO ROUTE
 import {Link} from "react-router-dom";
+// COMPONENTS
+import Table from "../../../components/Table";
+// DB MODELS
+import EmployeeModel from "../../../helpers/models/EmployeeModel";
 
 
 // EMPLOYEE HOME PAGE
 class EmployeeHome extends Component {
+
+    // CONSTRUCTOR
+    constructor(props) {
+        super(props);
+        this.state = {
+            employees: []
+        };
+    }; // END PROPS CONSTRUCTOR
+
+    // COMPONENT DID MOUNT
+    componentDidMount() {
+        EmployeeModel
+            .getAll()
+            .then(response => {
+                console.log(response.data)
+                this.setState({employees: response.data});
+            })
+            .catch(err => {
+                console.error(err);
+            }); // END THEN
+    }; // END COMPONENT DID MOUNT
+
     // RENDER
     render() {
         // RETURN
         return (
-            <div className="container-fluid">
+            <div className="container">
+                <Table/> {/* ADD EMPLOYEE BUTTON */}
                 <Link to="/employee/add">
                     <button className="btn btn-primary">
                         Add Employee

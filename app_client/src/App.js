@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 
 
 // HOME PAGES
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
 // EMPLOYEE PAGES
 import EmployeeHome from "./pages/employees/home/Employee.home";
 import EmployeeAdd from "./pages/employees/add/Employee.add";

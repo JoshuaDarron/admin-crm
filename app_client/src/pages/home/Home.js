@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Jumbotron from "../components/Jumbotron";
+import Jumbotron from "../../components/Jumbotron";
 
 // HOME PAGE
 class Home extends Component {
