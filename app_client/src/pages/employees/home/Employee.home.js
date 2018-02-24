@@ -8,7 +8,6 @@ import Table from "../../../components/Table";
 // DB MODELS
 import EmployeeModel from "../../../helpers/models/EmployeeModel";
 
-
 // EMPLOYEE HOME PAGE
 class EmployeeHome extends Component {
 
@@ -39,12 +38,23 @@ class EmployeeHome extends Component {
         // RETURN
         return (
             <div className="container">
-                {this.state.employees.length > 0 ?<Table employees = {this.state.employees}/> : ""}
-                <Link to="/employee/add">
-                    <button className="btn btn-primary">
-                        Add Employee
-                    </button>
-                </Link>
+                <div className="row">
+                    <div className="col-xs-12 col-sm-6 col-md-6">
+                        <h1 class="page-header employee-home-header">
+                            Employee List
+                        </h1>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-xs-12">
+                        {this.state.employees.length > 0
+                            ? <Table employees={this.state.employees}/>
+                            : ""}
+                        <Link className="btn btn-primary" to="/employee/add">
+                                Add Employee
+                        </Link>
+                    </div>
+                </div>
             </div>
         ); // END RETURN
     }; // END RENDER

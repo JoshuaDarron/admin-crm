@@ -24,7 +24,7 @@ class Table extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* TABLE ROW COMPONENT WITH DATA FROM DB */}
+                        {/* RUN TRHOUGH THE DATA ARRAY AND DISPLAY ONE TABLE ROW WITH THE DATA */}
                         {this
                             .props
                             .employees

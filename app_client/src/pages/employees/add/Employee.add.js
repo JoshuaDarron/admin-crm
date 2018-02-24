@@ -7,7 +7,6 @@ import Form from "../../../components/Form";
 import EmployeeModel from "../../../helpers/models/EmployeeModel";
 import FormStates from "../../../helpers/FormStates";
 
-
 // FORM CONTAINER STYLES
 const formContainerStyle = {
     boxShadow: "0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgb" +
@@ -36,7 +35,7 @@ class EmployeeAdd extends Component {
         e.preventDefault();
         // ERROR HANDLING
         console.log("In the handleSubmit");
-        
+
         EmployeeModel
             .create(this.state)
             .then(resp => {
@@ -67,9 +66,13 @@ class EmployeeAdd extends Component {
         return (
             <div className="container employee-add-header">
                 {/* EMPLOYEE ADD TITLE */}
-                <h1 class="employee-add-header">
-                    Add Employee
-                </h1>
+                <div className="row">
+                    <div className="col-xs-12 col-sm-8 col-md-8">
+                        <h1 class="page-header employee-add-header">
+                            Add Employee
+                        </h1>
+                    </div>
+                </div>
                 {/* EMPLOYEE ADD FORM */}
                 <div className="col-xs-10 col-sm-8 col-md-8" style={formContainerStyle}>
                     <Form
