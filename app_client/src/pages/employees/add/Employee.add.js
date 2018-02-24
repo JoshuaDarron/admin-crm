@@ -65,11 +65,13 @@ class EmployeeAdd extends Component {
     render() {
         // RETURN THIS HTML
         return (
-            <div className="container-fluid employee-add-header">
+            <div className="container employee-add-header">
+                {/* EMPLOYEE ADD TITLE */}
                 <h1 class="employee-add-header">
                     Add Employee
                 </h1>
-                <div className="col-xs-10 col-sm-8 col-md-6" style={formContainerStyle}>
+                {/* EMPLOYEE ADD FORM */}
+                <div className="col-xs-10 col-sm-8 col-md-8" style={formContainerStyle}>
                     <Form
                         state={FormStates.add}
                         employee={this.state}
@@ -80,7 +82,6 @@ class EmployeeAdd extends Component {
                         .handleSubmit
                         .bind(this)}/>
                 </div>
-
             </div>
         ); // END RETURN
     }; // END RENDER

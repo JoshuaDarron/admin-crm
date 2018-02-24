@@ -22,6 +22,7 @@ class EmployeeHome extends Component {
 
     // COMPONENT DID MOUNT
     componentDidMount() {
+        // DATABASE ROUTE WHEN COMPONENT LOADS
         EmployeeModel
             .getAll()
             .then(response => {

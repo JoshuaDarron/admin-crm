@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 // TABLE STYLE
 import "./Table.css";
-// COMPONENTS 
+// COMPONENTS
 import TableRow from "../TableRow/TableRow";
 
 // TABLE COMPONENT
@@ -13,6 +13,7 @@ class Table extends Component {
             <div>
                 <table class="table table-striped">
                     <thead>
+                        {/* TABLE HEADING */}
                         <tr>
                             <th>First Name</th>
                             <th>Last Name</th>
@@ -21,9 +22,11 @@ class Table extends Component {
                         </tr>
                     </thead>
                     <tbody>
-
-                       {this.props.employees.map(employee => <TableRow key={employee.id} employee={employee}/>)} 
-
+                        {/* TABLE ROW COMPONENT WITH DATA FROM DB */}
+                        {this
+                            .props
+                            .employees
+                            .map(employee => <TableRow key={employee.id} employee={employee}/>)}
                     </tbody>
                 </table>
             </div>
