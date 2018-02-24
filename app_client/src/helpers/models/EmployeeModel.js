@@ -5,8 +5,8 @@ const ROUTE = "/api/employee"
 // EXPORT THIS OBJECT
 export default {
     /**
-     * getOne Employee
-     * @param {*} id
+     * 
+     * @param {Number} id 
      */
     getOne(id) {
         return axios.get(`${ROUTE}/${id}`)

@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-
+// EMPLOYEE STYLE
+import "./Employee.edit.css";
 // EMPLOYEE EDIT PAGE
 class EmployeeEdit extends Component {
     // RENDER

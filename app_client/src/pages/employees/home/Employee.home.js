@@ -1,6 +1,9 @@
 import React, {Component} from "react";
+// EMPLOYEE HOME STYLES
+import "./Employee.home.css"
 // LINK FROM REACT ROUTER TO LINK TO ROUTE
 import {Link} from "react-router-dom";
+
 
 // EMPLOYEE HOME PAGE
 class EmployeeHome extends Component {

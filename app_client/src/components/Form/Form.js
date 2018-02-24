@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+// FORM STYLE
+import "./Form.css";
 // IMPORT STATE FROM HELPERS FOLDER
 import FormStates from "../../helpers/FormStates";
 
@@ -6,6 +8,7 @@ import FormStates from "../../helpers/FormStates";
 class Form extends Component {
     // RENDER
     render() {
+        
         let readOnly = false;
 
         if (this.props.state === FormStates.view) {
@@ -14,10 +17,10 @@ class Form extends Component {
         // RETURN
         return (
             <div>
-                <form>
+                <form class="form-wrapper">
                     {/* FIRST NAME */}
-                    <div className="form-group row">
-                        <label htmlFor="firstName" className="col-sm-2 col-form-label text-center">
+                    <div className="form-group row form-wrapper">
+                        <label htmlFor="firstName" className="col-sm-2 col-form-label text-center form-label">
                             First Name
                         </label>
                         <div className="col-sm-10">
@@ -33,7 +36,7 @@ class Form extends Component {
                     </div>
                     {/* LAST NAME */}
                     <div className="form-group row">
-                        <label htmlFor="lastName" className="col-sm-2 col-form-label text-center">
+                        <label htmlFor="lastName" className="col-sm-2 col-form-label text-center form-label">
                             Last Name
                         </label>
                         <div className="col-sm-10">
@@ -49,7 +52,7 @@ class Form extends Component {
                     </div>
                     {/* AGE */}
                     <div className="form-group row">
-                        <label htmlFor="age" className="col-sm-2 col-form-label text-center">
+                        <label htmlFor="age" className="col-sm-2 col-form-label text-center form-label">
                             Age
                         </label>
                         <div className="col-sm-10">
@@ -65,7 +68,7 @@ class Form extends Component {
                     </div>
                     {/* JOB TITLE */}
                     <div className="form-group row">
-                        <label htmlFor="jobTitle" className="col-sm-2 col-form-label text-center">
+                        <label htmlFor="jobTitle" className="col-sm-2 col-form-label text-center form-label">
                             Job Title
                         </label>
                         <div className="col-sm-10">

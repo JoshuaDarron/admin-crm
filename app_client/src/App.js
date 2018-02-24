@@ -8,10 +8,10 @@ import Footer from "./components/Footer";
 // HOME PAGES
 import Home from "./pages/Home";
 // EMPLOYEE PAGES
-import EmployeeHome from "./pages/employees/EmployeeHome";
-import EmployeeAdd from "./pages/employees/EmployeeAdd";
-import EmployeeEdit from "./pages/employees/EmployeeEdit";
-import EmployeeView from "./pages/employees/EmployeeView";
+import EmployeeHome from "./pages/employees/home/Employee.home";
+import EmployeeAdd from "./pages/employees/add/Employee.add";
+import EmployeeEdit from "./pages/employees/edit/Employee.edit";
+import EmployeeView from "./pages/employees/view/Employee.view";
 
 // APP STYLES
 import './App.css';

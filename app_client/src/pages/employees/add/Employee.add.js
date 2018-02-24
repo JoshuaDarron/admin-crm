@@ -1,9 +1,12 @@
 import React, {Component} from "react";
+// EMPLOYEE STYELS
+import "./Employee.add.css";
 // COMPONENTS
-import Form from "../../components/Form";
+import Form from "../../../components/Form";
 // HELPERS
-import EmployeeModel from "../../helpers/models/EmployeeModel";
-import FormStates from "../../helpers/FormStates";
+import EmployeeModel from "../../../helpers/models/EmployeeModel";
+import FormStates from "../../../helpers/FormStates";
+
 
 // FORM CONTAINER STYLES
 const formContainerStyle = {
@@ -62,8 +65,8 @@ class EmployeeAdd extends Component {
     render() {
         // RETURN THIS HTML
         return (
-            <div className="container-fluid">
-                <h1>
+            <div className="container-fluid employee-add-header">
+                <h1 class="employee-add-header">
                     Add Employee
                 </h1>
                 <div className="col-xs-10 col-sm-8 col-md-6" style={formContainerStyle}>
