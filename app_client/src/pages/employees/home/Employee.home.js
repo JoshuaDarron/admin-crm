@@ -38,7 +38,7 @@ class EmployeeHome extends Component {
         // RETURN
         return (
             <div className="container">
-                <Table/> {/* ADD EMPLOYEE BUTTON */}
+                {this.state.employees.length > 0 ?<Table employees = {this.state.employees}/> : ""}
                 <Link to="/employee/add">
                     <button className="btn btn-primary">
                         Add Employee
