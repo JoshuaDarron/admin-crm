@@ -1,0 +1,10 @@
+.employee-add-header {
+    font-weight: 200;
+}
+
+#form-add {
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14);
+    background-color: #F6F6F6;
+    border: black;
+    padding: 0.5em 0.75em 0.625em;   
+}

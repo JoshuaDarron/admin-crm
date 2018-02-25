@@ -4,9 +4,7 @@ import "./Jumbotron.css";
 
 // JUMBOTRON COMPONENT
 class Jumbotron extends Component {
-    // RENDER
     render() {
-        // RETURN
         return (
             <div class="jumbotron">
                 <h1 class="header">

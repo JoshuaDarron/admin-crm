@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 // EMPLOYEE VIEW STYLES
-import "./Employee.view.css";
+import "./EmployeeView.css";
 
 // EMPLOYEE VIEW PAGE
 class EmployeeView extends Component {

@@ -4,9 +4,7 @@ import {Link} from "react-router-dom";
 
 // TABLE ROW COMPONENT
 class TableRow extends Component {
-    // RENDER
     render() {
-        // RETURN
         return (
             <tr>
                 <td>
@@ -22,13 +20,21 @@ class TableRow extends Component {
                     </Link>
                 </td>
                 {/* FIRST NAME */}
-                <td>{this.props.employee.firstName}</td>
+                <td>
+                    {this.props.employee.firstName}
+                </td>
                 {/* LAST NAME */}
-                <td>{this.props.employee.lastName}</td>
+                <td>
+                    {this.props.employee.lastName}
+                </td>
                 {/* AGE */}
-                <td>{this.props.employee.age}</td>
+                <td>
+                    {this.props.employee.age}
+                </td>
                 {/* JOB TITLE */}
-                <td>{this.props.employee.jobTitle}</td>
+                <td>
+                    {this.props.employee.jobTitle}
+                </td>
             </tr>
         ); // END RETURN 
     }; // END RENDER

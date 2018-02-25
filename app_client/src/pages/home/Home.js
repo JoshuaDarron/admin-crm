@@ -7,7 +7,7 @@ class Home extends Component {
     render() {
         // RETURN
         return (
-            <div className="container-fluid text-center">
+            <div className=" container-fluid text-center">
                 <Jumbotron />
             </div>
         ); // END RETURN

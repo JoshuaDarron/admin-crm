@@ -1,6 +1,5 @@
 import React, {Component} from "react";
-// EMPLOYEE HOME STYLES
-import "./Employee.home.css"
+import "./EmployeeHome.css"
 // LINK FROM REACT ROUTER TO LINK TO ROUTE
 import {Link} from "react-router-dom";
 // COMPONENTS
@@ -8,10 +7,11 @@ import Table from "../../../components/Table";
 // DB MODELS
 import EmployeeModel from "../../../helpers/models/EmployeeModel";
 
+const categoryName = ["View", "Edit", "First Name", "Last Name", "Age", "Job Title"];
+
 // EMPLOYEE HOME PAGE
 class EmployeeHome extends Component {
-
-    // CONSTRUCTOR
+    // GETS PROPS FROM BACK END
     constructor(props) {
         super(props);
         this.state = {
@@ -33,9 +33,7 @@ class EmployeeHome extends Component {
             }); // END THEN
     }; // END COMPONENT DID MOUNT
 
-    // RENDER
     render() {
-        // RETURN
         return (
             <div className="container">
                 <div className="row">
@@ -48,7 +46,9 @@ class EmployeeHome extends Component {
                 <div className="row">
                     <div className="col-xs-12">
                         {this.state.employees.length > 0
-                            ? <Table employees={this.state.employees}/>
+                            ? <Table 
+                                category={categoryName}
+                                employees={this.state.employees}/>
                             : ""}
                         <Link className="btn btn-primary" to="/employee/add">
                                 Add Employee

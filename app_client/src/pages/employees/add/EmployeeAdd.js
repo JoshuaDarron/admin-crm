@@ -1,20 +1,10 @@
 import React, {Component} from "react";
-// EMPLOYEE STYELS
-import "./Employee.add.css";
+import "./EmployeeAdd.css";
 // COMPONENTS
 import Form from "../../../components/Form";
 // HELPERS
 import EmployeeModel from "../../../helpers/models/EmployeeModel";
 import FormStates from "../../../helpers/FormStates";
-
-// FORM CONTAINER STYLES
-const formContainerStyle = {
-    boxShadow: "0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgb" +
-            "a(0,0,0,0.3)",
-    backgroundColor: "#F6F6F6",
-    border: "black",
-    padding: "0.5em 0.75em 0.625em"
-}; // END CONTIANER STYLES
 
 // EMPLOYEE ADD PAGE
 class EmployeeAdd extends Component {
@@ -74,7 +64,7 @@ class EmployeeAdd extends Component {
                     </div>
                 </div>
                 {/* EMPLOYEE ADD FORM */}
-                <div className="col-xs-10 col-sm-8 col-md-8" style={formContainerStyle}>
+                <div className="col-xs-10 col-sm-8 col-md-8" id="form-add">
                     <Form
                         state={FormStates.add}
                         employee={this.state}
