@@ -6,13 +6,13 @@ const ctrl = require("../controllers/employee.ctrl");
 const router = express.Router();
 
 // CREATE AN EMPLOYEE
-router.post("/create", ctrl.createEmployee);
+router.post("/employee", ctrl.createEmployee);
 // FIND ALL EMPLOYEES
-router.get("/findall", ctrl.findAllEmployees);
+router.get("/employee", ctrl.findAllEmployees);
 // FIND ONE EMPLOYEE @ ID
-router.get("/findone/:id", ctrl.findOneEmployee);
+router.get("/employee/:id", ctrl.findOneEmployee);
 // DELETE ONE EMPLOYEE
-router.delete("/delete/:id", ctrl.deleteEmployee);
+router.delete("/employee/:id", ctrl.deleteEmployee);
 
 // EXPORT THE ROUTER TO BE USED IN THE SERVER
 module.exports = router;

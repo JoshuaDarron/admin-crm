@@ -58,7 +58,7 @@ class EmployeeAdd extends Component {
                 {/* EMPLOYEE ADD TITLE */}
                 <div className="row">
                     <div className="col-xs-12 col-sm-8 col-md-8">
-                        <h1 class="page-header employee-add-header">
+                        <h1 class="page-header add-header">
                             Add Employee
                         </h1>
                     </div>

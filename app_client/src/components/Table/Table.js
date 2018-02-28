@@ -15,18 +15,10 @@ class Table extends Component {
                     <thead>
                         {/* TABLE HEADING */}
                         <tr>
-
                             {this
                                 .props
                                 .category
                                 .map(category => <th>{category}</th>)}
-
-                            {/* <th>View</th>
-                            <th>Edit</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Age</th>
-                            <th>Job Title</th> */}
                         </tr>
                     </thead>
                     <tbody>

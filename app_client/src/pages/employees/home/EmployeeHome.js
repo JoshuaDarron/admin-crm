@@ -11,7 +11,7 @@ const categoryName = ["View", "Edit", "First Name", "Last Name", "Age", "Job Tit
 
 // EMPLOYEE HOME PAGE
 class EmployeeHome extends Component {
-    // GETS PROPS FROM BACK END
+
     constructor(props) {
         super(props);
         this.state = {
@@ -38,7 +38,7 @@ class EmployeeHome extends Component {
             <div className="container">
                 <div className="row">
                     <div className="col-xs-12 col-sm-6 col-md-6">
-                        <h1 class="page-header employee-home-header">
+                        <h1 class="page-header home-header">
                             Employee List
                         </h1>
                     </div>
