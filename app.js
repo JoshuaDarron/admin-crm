@@ -12,7 +12,7 @@ const routes = require("./app_api/routes/employee.route");
 // BODY PARSER CONFIG
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static('app_client/build'));
+app.use(express.static('app_client/public'));
 
 // API ROUTES
 app.use("/api", routes);
