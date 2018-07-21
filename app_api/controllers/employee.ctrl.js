@@ -3,12 +3,12 @@ const db = require("../models");
 
 // EXPORT ALL THE CONTROLLERS
 module.exports = {
-    
+
     // CREATE AN EMPLOYEE
     createEmployee: (req, res) => {
         db
             .Employee
-            .create({firstName: req.body.firstName, lastName: req.body.lastName, age: req.body.age, jobTitle: req.body.jobTitle})
+            .create({ firstName: req.body.firstName, lastName: req.body.lastName, age: req.body.age, jobTitle: req.body.jobTitle })
             .then(dbEmp => {
                 res.json(dbEmp);
             })
@@ -66,5 +66,5 @@ module.exports = {
                 res.json(err);
             });
     } // END DELETE
-    
+
 }; // END EXPORT

@@ -13,7 +13,8 @@ class Form extends Component {
 
         if (this.props.state === FormStates.view) {
             readOnly = true;
-        }
+        };
+
         // RETURN
         return (
             <div>
@@ -91,7 +92,6 @@ class Form extends Component {
                             Create
                         </button>
                     </div>
-
                 </form>
             </div>
         ); // END RETRURN

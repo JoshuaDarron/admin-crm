@@ -20,7 +20,7 @@ class EmployeeAdd extends Component {
     }; // END CONSTRUCTOR
 
     // HANDLE SUBMIT CLICK
-    handleSubmit(e) {
+    handleSubmit = e => {
         // PREVENT PAGE RELOAD
         e.preventDefault();
         // ERROR HANDLING
@@ -34,14 +34,12 @@ class EmployeeAdd extends Component {
                     .history
                     .push("/employees")
             })
-            .catch(err => {
-                console.error(err);
-            })
+            .catch(err => console.error(err));
     }; // END HANDLE SUBMIT
 
     // HANDLE STATE CHANGE
-    handleChange(event) {
-        const target = event.target;
+    handleChange = e => {
+        const target = e.target;
         const value = target.type === 'checkbox'
             ? target.checked
             : target.value;

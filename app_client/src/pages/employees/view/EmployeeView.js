@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import FormStates from "../../../helpers/FormStates";
-import Table from "../../../components/Table";
-import Form from "../../../components/Form"
-import EmployeeModel from "../../../helpers/models/EmployeeModel";
+// import FormStates from "../../../helpers/FormStates";
+// import Table from "../../../components/Table";
+// import Form from "../../../components/Form"
+// import EmployeeModel from "../../../helpers/models/EmployeeModel";
 
-import "./EmployeeView.css";
+// import "./EmployeeView.css";
 
-const categoryName = ["View", "Edit", "First Name", "Last Name", "Age", "Job Title"];
+// const categoryName = ["View", "Edit", "First Name", "Last Name", "Age", "Job Title"];
 
 
 
@@ -21,27 +21,27 @@ class EmployeeView extends Component {
         this.gotoEdit = this.gotoEdit.bind(this);
     }; // END CONSTRUCTOR 
 
-    componentDidMount() {
-        EmployeeModel.getOne(this.props.match.params.id)
-        .then(resp => {
-            this.setState({employee: resp.data});
-        })
-        .catch(err => console.error(err));
-    }; // END COMPONENT DID MOUNT
+    // componentDidMount() {
+    //     EmployeeModel.getOne(this.props.match.params.id)
+    //     .then(resp => {
+    //         this.setState({employee: resp.data});
+    //     })
+    //     .catch(err => console.error(err));
+    // }; // END COMPONENT DID MOUNT
 
-    gotoEdit(e) {
-        e.preventDefault();
-        this.props.history.push(`/employees/edit/${this.props.match.params.id}`);
-    }; // END GO TO EDIT 
+    // gotoEdit(e) {
+    //     e.preventDefault();
+    //     this.props.history.push(`/employees/edit/${this.props.match.params.id}`);
+    // }; // END GO TO EDIT 
 
-    handleDelete(e) {
-        e.preventDefault();
-        EmployeeModel.delete(this.props.match.params.id)
-        .then(resp => {
-            console.log(resp);
-            this.props.history.push("/employees");
-        }).catch(err => console.error(err));
-    }; // END HANDLE DELETE
+    // handleDelete(e) {
+    //     e.preventDefault();
+    //     EmployeeModel.delete(this.props.match.params.id)
+    //     .then(resp => {
+    //         console.log(resp);
+    //         this.props.history.push("/employees");
+    //     }).catch(err => console.error(err));
+    // }; // END HANDLE DELETE
 
     render() {
         return (
@@ -49,7 +49,7 @@ class EmployeeView extends Component {
                 <h1 class="page-header view-header">
                     View Employee
                 </h1>
-                <Table 
+                {/* <Table 
                     category={categoryName}
                     employees={this.state.employees}/>
 
@@ -58,7 +58,7 @@ class EmployeeView extends Component {
                     formState={FormStates.view}
                     employee={this.state.employee}
                     handleDelete={this.handleDelete} />
-                </div> 
+                </div>  */}
             </div>
         ); // END RETURN
     }; // END RENDER 

@@ -1,6 +1,6 @@
 import axios from "axios";
 // API ROUTE
-const ROUTE = "/api/employee"
+const ROUTE = "/api/employee";
 
 // EXPORT THIS OBJECT
 export default {
