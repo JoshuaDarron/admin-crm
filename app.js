@@ -16,9 +16,9 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(logger('dev'));
 
 if (isDev)
-    app.use(express.static('app_client/public'));
+    app.use(express.static('./app_client/public'));
 else
-    app.use(express.static('app_client/build'));
+    app.use(express.static('./app_client/build'));
 
 // API ROUTES
 app.use("/api", routes);
