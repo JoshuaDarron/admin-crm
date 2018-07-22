@@ -4,6 +4,7 @@ const express = require("express")
     , db = require("./app_api/models")
     , PORT = process.env.PORT || 3001
     , app = express()
+    ,  path = require('path')
     , routes = require("./app_api/routes/employee.route")
     , logger = require('morgan')
     , isDev = process.env.NODE_ENV === 'development';
@@ -15,10 +16,11 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(logger('dev'));
 
-if (isDev)
-    app.use(express.static(path.join(__dirname, 'public')));
-else
-    app.use(express.static('./app_client/build'));
+// if (isDev)
+    // app.use(express.static('./app_client/public'));
+    app.use(express.static(path.join(__dirname, 'build')));
+// else
+//     app.use(express.static('./app_client/build'));
 
 // API ROUTES
 app.use("/api", routes);
